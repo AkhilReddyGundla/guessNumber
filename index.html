@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquries.css">
+</head>
+<body>
+    <h2 class="heading text">Number Guessing Game</h2>
+    <div class="box">
+        <h3 class="box-heading">
+            Try and guess random number 1 and 100.
+            <span> You have 10 attempts to guess the right number</span>
+        </h3>
+        <h1 class="heading">Guess a Number</h1>
+        <input type="text" id="guess" class="guess-field inner-text">
+        <br>
+        <input type="submit" id="submit-button" class="button inner-text text">
+        <div class="result">
+            <p class="inner-text text">Previous Guessess : <span class="lastGuesses "></span></p>
+            <p class="inner-text text">Remaining Guessess : <span class="remGuesses">10</span> </p>
+            <p class="finalResult inner-text text"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
