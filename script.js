@@ -13,7 +13,7 @@ const p = document.createElement('p')
 
 let guessess = []
 let playGame = true
-let guessessRem = 10
+let guessessRem = 9
 
 
 if(playGame){
