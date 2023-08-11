@@ -11,6 +11,7 @@ body{
     text-align: center;
     margin-top: 12%;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 span{
     display: block;
@@ -62,4 +63,7 @@ span{
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
+}
+.finalResult{
+    color: red;
 }
