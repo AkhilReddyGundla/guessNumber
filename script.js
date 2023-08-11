@@ -47,8 +47,8 @@ function validateInput(userInput){
 
 function checkGuess(userInput){
    if(userInput === randomNumber){
-        console.log("hello")
         displayMessage(`your guess is right ${randomNumber}`)
+        result.style.color='green';
         endGame()
    }else if(userInput< randomNumber){
         displayMessage("Number is TOOO low")
@@ -76,8 +76,8 @@ function endGame(){
     p.innerHTML=`<h3 id="newGame">Start new Game</h3>`
     p.style.color = "green"
     p.style.textAlign = "center"
-    p.style.width = "100%"
     p.style.fontSize = '1rem'
+    p.style.width = "100%"
     p.style.cursor = "pointer"
     startOver.appendChild(p)
     playGame = false;
