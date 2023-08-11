@@ -1,4 +1,4 @@
-let randomNumber = parseInt(Math.random()*100 + 1) 
+let randomNumber = parseInt(Math.random()*100 + 1)   // random number is created
 const inputNum = document.querySelector("#guess")
 const submit = document.querySelector("#submit-button")
 const prevGuessess = document.querySelector(".lastGuesses")
@@ -7,18 +7,20 @@ const result = document.querySelector(".finalResult")
 const startOver = document.querySelector(".result")
 
 
-console.log(randomNumber)
 
 const p = document.createElement('p')
 
-let guessess = []
+let guessess = []   //storing previous gussess
 let playGame = true
-let guessessRem = 9
+let guessessRem = 9  // total number of gussess allowed 9 to 0 
+//if gurrseeRem === -1 then we stop the game
 
 
+
+//if playGame is true
 if(playGame){
     submit.addEventListener('click' , function(e){
-        e.preventDefault();
+        e.preventDefault();  //default action that belongs to the event will not occur.
         const userInput =parseInt(inputNum.value)
         inputNum.value= ''
         validateInput(userInput);
@@ -55,12 +57,11 @@ function checkGuess(userInput){
     }else{
         displayMessage("Number is TOOO High")
     }
-    displayGuess(userInput)
+    displayGuess(userInput);
 
 }
 function displayGuess(userInput){
-    guessessRem--;
-    
+    guessessRem--; // decrementing gussess and updating
     prevGuessess.innerHTML += ` ${userInput}`
     remGuessess.innerHTML = guessessRem
 }
@@ -80,12 +81,13 @@ function endGame(){
     p.style.width = "100%"
     p.style.cursor = "pointer"
     startOver.appendChild(p)
-    playGame = false;
-    newGame()
+    playGame = false; // stop new game
+    newGame(); //suggest user to start new game
 }
 function newGame(){
     const newBtn = document.createElement("button")
     p.addEventListener('click', function(e){
+        //Defining the project's standard operational characteristics
         randomNumber = parseInt(Math.random()*100 + 1)
         guessess = []
         guessessRem = 10
